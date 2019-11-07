@@ -1,0 +1,3 @@
+﻿1S45, Dep: London (Kings Cross), Dest: Edinburgh (Waverley), Express, Stop: , Stop: , Stop: , Stop: , 10:00, 01/11/18, has cabin False, has first True
+1E05, Dep: Edinburgh (Waverley), Dest: London (Kings Cross), Stopping, Stop: , Stop: York, Stop: Darlington, Stop: Peterborough, 12:00, 01/11/18, has cabin False, has first True
+1E99, Dep: Edinburgh (Waverley), Dest: London (Kings Cross), Sleeper, Stop: , Stop: , Stop: , Stop: , 21:30, 01/11/18, has cabin True, has first False

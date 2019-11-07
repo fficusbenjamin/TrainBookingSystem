@@ -1,0 +1,78 @@
+﻿<Window x:Class="PresentationLayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationLayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1100">
+    <Grid>
+        <Label x:Name="_lblTitle" Content="Please Insert a New Train:" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="_lblTrainDep" Content="Departure:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="_cmbTrainDep" HorizontalAlignment="Left" Margin="132,134,0,0" VerticalAlignment="Top" Width="193" SelectionChanged="_cmbTrainDep_SelectionChanged">
+            <ComboBoxItem Content="Edinburgh (Waverley)"/>
+            <ComboBoxItem Content="London (Kings Cross)"/>
+        </ComboBox>
+        <Label x:Name="_lblTrainDest" Content="Destination:" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="_cmbTrainDest" HorizontalAlignment="Left" Margin="132,165,0,0" VerticalAlignment="Top" Width="193" SelectionChanged="_cmbTrainDest_SelectionChanged">
+            <ComboBoxItem Content="Edinburgh (Waverley)"/>
+            <ComboBoxItem Content="London (Kings Cross)"/>
+        </ComboBox>
+        <Label x:Name="_lblTrainTyp" Content="Type:" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="_lblTrainInterm" Content="Intermediate stops:" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Height="26"/>
+        <CheckBox x:Name="_chkTrainNewCastle" Content="New Castle" HorizontalAlignment="Left" Margin="132,228,0,0" VerticalAlignment="Top" Checked="_chkTrainNewCastle_Checked" IsEnabled="False"/>
+        <CheckBox x:Name="_chkTrainYork" Content="York" HorizontalAlignment="Left" Margin="232,228,0,0" VerticalAlignment="Top" Checked="_chkTrainYork_Checked" IsEnabled="False"/>
+        <CheckBox x:Name="_chkTrainDarlington" Content="Darlington" HorizontalAlignment="Left" Margin="132,248,0,0" VerticalAlignment="Top" Checked="_chkTrainDarlington_Checked" IsEnabled="False"/>
+        <CheckBox x:Name="_chkTrainPeterborough" Content="Peterborough" HorizontalAlignment="Left" Margin="232,248,0,0" VerticalAlignment="Top" Checked="_chkTrainPeterborough_Checked" IsEnabled="False"/>
+        <Label x:Name="_lblTrainTime" Content="Departure Time:" HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" Height="26"/>
+        <ComboBox x:Name="_cmbTrainHour" HorizontalAlignment="Left" Margin="132,274,0,0" VerticalAlignment="Top" Width="85" SelectionChanged="_cmbTrainHour_SelectionChanged">
+            <ComboBoxItem Content="05"/>
+            <ComboBoxItem Content="06"/>
+            <ComboBoxItem Content="07"/>
+            <ComboBoxItem Content="08"/>
+            <ComboBoxItem Content="09"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="11"/>
+            <ComboBoxItem Content="12"/>
+            <ComboBoxItem Content="13"/>
+            <ComboBoxItem Content="14"/>
+            <ComboBoxItem Content="15"/>
+            <ComboBoxItem Content="16"/>
+            <ComboBoxItem Content="17"/>
+            <ComboBoxItem Content="18"/>
+            <ComboBoxItem Content="19"/>
+            <ComboBoxItem Content="20"/>
+            <ComboBoxItem Content="21"/>
+            <ComboBoxItem Content="22"/>
+            <ComboBoxItem Content="23"/>
+            <ComboBoxItem Content="00"/>
+        </ComboBox>
+        <Label x:Name="_lblTrainTi_" Content=":" HorizontalAlignment="Left" Margin="222,270,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="2.902,0.624"/>
+        <ComboBox x:Name="_cmbTrainMin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="240,274,0,0" SelectionChanged="_cmbTrainMin_SelectionChanged">
+            <ComboBoxItem Content="00"/>
+            <ComboBoxItem Content="15"/>
+            <ComboBoxItem Content="30"/>
+            <ComboBoxItem Content="45"/>
+        </ComboBox>
+        <Label x:Name="_lblTrainDate" Content="Departure Date:" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" Height="26"/>
+        <DatePicker x:Name="_dateTrain" HorizontalAlignment="Left" Margin="132,303,0,0" VerticalAlignment="Top" Width="193" SelectedDateChanged="_dateTrain_SelectedDateChanged"/>
+        <Label x:Name="_lblTrainBerth" Content="Sleeper Berth:" HorizontalAlignment="Left" Margin="10,332,0,0" VerticalAlignment="Top" Height="26"/>
+        <CheckBox x:Name="_chkTrainBerth" Content="" HorizontalAlignment="Left" Margin="132,338,0,0" VerticalAlignment="Top" Checked="_chkTrainBerth_Checked"/>
+        <Label x:Name="_lblTrainFirst" Content="First Class:" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top" Height="26"/>
+        <CheckBox x:Name="_chkTrainFirst" Content="" HorizontalAlignment="Left" Margin="132,369,0,0" VerticalAlignment="Top" Checked="_chkTrainFirst_Checked"/>
+        <Button x:Name="_btnAdd" Content="Add" HorizontalAlignment="Left" Margin="10,412,0,0" VerticalAlignment="Top" Width="75" Click="_btnAdd_Click"/>
+        <Button x:Name="_btnClear" Content="Clear" HorizontalAlignment="Left" Margin="101,412,0,0" VerticalAlignment="Top" Width="75" Click="_btnClear_Click"/>
+        <Button x:Name="_btnBook" Content="Book a Ticket" HorizontalAlignment="Left" Margin="809,412,0,0" VerticalAlignment="Top" Width="166" Click="_btnBook_Click"/>
+        <Label x:Name="_lblTrainID" Content="Train ID (e.g. 1A45):" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="_txtTrainID" HorizontalAlignment="Left" Height="23" Margin="132,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" RenderTransformOrigin="-0.191,1.311" MaxLength="4"/>
+        <ComboBox x:Name="_cmbTrainType" HorizontalAlignment="Left" Margin="132,195,0,0" VerticalAlignment="Top" Width="193" SelectionChanged="_cmbTrainType_SelectionChanged">
+            <ComboBoxItem Content="Express"/>
+            <ComboBoxItem Content="Stopping"/>
+            <ComboBoxItem Content="Sleeper"/>
+        </ComboBox>
+        <ListBox x:Name="_lstAllTrains" HorizontalAlignment="Left" Height="282" Margin="339,102,0,0" VerticalAlignment="Top" Width="728" Loaded="_lstAllTrains_Loaded"/>
+        <Label x:Name="_lblAvTr" Content="Available Trains:" HorizontalAlignment="Left" Margin="565,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="_btnListAll" Content="List All Trains" HorizontalAlignment="Left" Margin="339,412,0,0" VerticalAlignment="Top" Width="75" Click="_btnListAll_Click"/>
+        <Button x:Name="_btnClearTrain" Content="Clear List" HorizontalAlignment="Left" Margin="429,412,0,0" VerticalAlignment="Top" Width="75" Click="_btnClearTrain_Click"/>
+    </Grid>
+</Window>

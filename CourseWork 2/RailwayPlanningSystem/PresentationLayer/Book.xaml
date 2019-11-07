@@ -1,0 +1,52 @@
+﻿<Window x:Class="PresentationLayer.Book"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationLayer"
+        mc:Ignorable="d"
+        Title="Book" Height="600" Width="1100">
+    <Grid RenderTransformOrigin="0.62,0.569">
+        <Button x:Name="_btnBack" Content="Back" HorizontalAlignment="Left" Margin="17,521,0,0" VerticalAlignment="Top" Width="120" Click="_btnBack_Click"/>
+        <Label x:Name="_lblBkName" Content="Name:" HorizontalAlignment="Left" Margin="17,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="_lblBk" Content="Please Book a Train:" HorizontalAlignment="Left" Margin="23,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="_lblBkTrain" Content="Train ID (e.g. 1A45):" HorizontalAlignment="Left" Margin="18,124,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="_lblBkDep" Content="Departure:" HorizontalAlignment="Left" Margin="17,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <Label x:Name="_lblBkDest" Content="Destination:" HorizontalAlignment="Left" Margin="17,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <Label x:Name="_lblBkFirst" Content="First Class:" HorizontalAlignment="Left" Margin="18,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <Label x:Name="_lblBkBerth" Content="Sleeper Berth:" HorizontalAlignment="Left" Margin="18,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <Label x:Name="_lblBkCoach" Content="Coach (A-H):" HorizontalAlignment="Left" Margin="18,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <Label x:Name="_lblBkSeat" Content="Seat (1-60):" HorizontalAlignment="Left" Margin="18,341,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <TextBox x:Name="_txtBkName" HorizontalAlignment="Left" Height="23" Margin="157,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="_txtBkTrID" HorizontalAlignment="Left" Height="23" Margin="157,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="_cmbBkDep" HorizontalAlignment="Left" Margin="157,159,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="_cmbBkDep_SelectionChanged">
+            <ComboBoxItem Content="Edinburgh (Waverley)"/>
+            <ComboBoxItem Content="Peterborough"/>
+            <ComboBoxItem Content="Darlington"/>
+            <ComboBoxItem Content="York"/>
+            <ComboBoxItem Content="New Castle"/>
+            <ComboBoxItem Content="London (Kings Cross)"/>
+        </ComboBox>
+        <ComboBox x:Name="_cmbBkDest" HorizontalAlignment="Left" Margin="157,190,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="_cmbBkDest_SelectionChanged">
+            <ComboBoxItem Content="Edinburgh (Waverley)"/>
+            <ComboBoxItem Content="Peterborough"/>
+            <ComboBoxItem Content="Darlington"/>
+            <ComboBoxItem Content="York"/>
+            <ComboBoxItem Content="New Castle"/>
+            <ComboBoxItem Content="London (Kings Cross)"/>
+        </ComboBox>
+        <CheckBox x:Name="_chkBkFcl" Content="" HorizontalAlignment="Left" Margin="157,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.45,0.533" Checked="_chkBkFcl_Checked" IsEnabled="False"/>
+        <CheckBox x:Name="_chkBkSlpBrth" Content="" HorizontalAlignment="Left" Margin="157,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.45,0.533" Checked="_chkBkSlpBrth_Checked" IsEnabled="False"/>
+        <ListBox x:Name="_lstBkTrains" HorizontalAlignment="Left" Height="208" Margin="300,97,0,0" VerticalAlignment="Top" Width="759" Loaded="_lstBkTrains_Loaded" SelectionChanged="_lstBkTrains_SelectionChanged"/>
+        <Button x:Name="_btnBkBook" Content="Book" HorizontalAlignment="Left" Margin="300,521,0,0" VerticalAlignment="Top" Width="120" Click="_btnBkBook_Click"/>
+        <TextBox x:Name="_txtBkCoach" HorizontalAlignment="Left" Height="23" Margin="157,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="1"/>
+        <TextBox x:Name="_txtBkSeat" HorizontalAlignment="Left" Height="23" Margin="157,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="2"/>
+        <Label x:Name="_lblBkAvTrains" Content="Available Trains:" HorizontalAlignment="Left" Margin="300,35,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="_btnBkPrice" Content="Price Quotation" HorizontalAlignment="Left" Margin="157,521,0,0" VerticalAlignment="Top" Width="120" Click="_btnBkPrice_Click"/>
+        <Label x:Name="_lblBkType" Content="Type: " HorizontalAlignment="Left" Margin="18,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.929"/>
+        <TextBox x:Name="_txtBkType" HorizontalAlignment="Left" Height="23" Margin="157,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="_txtSummary" HorizontalAlignment="Left" Height="120" Margin="23,391,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="254" IsEnabled="False"/>
+        <ListBox x:Name="_lstBkBookings" HorizontalAlignment="Left" Height="198" Margin="300,313,0,0" VerticalAlignment="Top" Width="759" Loaded="_lstBkBookings_Loaded"/>
+
+    </Grid>
+</Window>
